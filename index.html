@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anjali Kurba | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sec1.css">
+    <link rel="stylesheet" href="sec2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Anjali Kurba</div>
+        <ul class="menu-bar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="sec1" id="home">
+        <div class="sec1-1"><img src="assets/IMG_3900.JPG" alt="Anjali Kurba"></div>
+        <div class="sec1-2">
+            <span class="sec1-2-1">Hello, I'm</span>
+            <h1>Anjali Kurba</h1>
+            <span class="sec1-2-3">Frontend Developer</span>
+            <p>Passionate about building beautiful and functional web experiences.</p>
+            <div class="btns">
+                <a href="/assets/resume.pdf" download="resume.pdf">Download Resume</a>
+                <button onclick="window.location.href='tel:+917032484203'">Contact Info</button>
+            </div>
+            <div class="social">
+                <a href="https://linkedin.com/anjalikurba" target="_blank"><img src="/assets/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/anjalikurba" target="_blank"><img src="/assets/github.png" alt="GitHub"></a>
+            </div>
+        </div>
+    </section>
+    <section class="sec2" id="about">
+        <div class="sec2-1">
+            <h1>About</h1>
+        </div>
+        <div class="sec2-2">
+            <div class="sec2-2-1">
+                <img src="/assets/IMG_3900.JPG" alt="Anjali Kurba">
+            </div>
+            <div class="sec2-2-2">
+                <h2>I'm Kurba Anjali</h2>
+                <p>Frontend developer with a strong foundation in HTML, CSS, and JavaScript. I enjoy turning complex problems into simple, beautiful, and intuitive designs. Always eager to learn new technologies and improve my skills.</p>
+            </div>
+           <!-- ...existing code... -->
+<div class="sec2-2-2-1">
+    <div class="box">
+        <img src="/assets/education.png" alt="Education">
+        <span style="font-weight:bold; font-size:1.1rem;">Education</span>
+        <ul style="list-style: disc; padding-left: 1.2em; text-align:left; margin:0.5em 0 0 0;">
+            <li>B.Tech in Computer Science,JNTUA University (2022 - 2026)</li>
+            <li>Intermediate, Viswanarayana Junior College (2020 - 2022)</li>
+            <li>SSC, State Board (2020)</li>
+        </ul>
+    </div>
+</div>
+<!-- ...existing code... --> 
+        </div>
+
+    </section>
+    <!-- Skills Section -->
+<section class="sec3" id="skills">
+    <div class="sec3-1">
+        <h1>Skills</h1>
+    </div>
+    <div class="sec3-2">
+        <div class="skill-box">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-js"></i>
+            <span>JavaScript</span>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-react"></i>
+            <span>React</span>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-git-alt"></i>
+            <span>Git</span>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section class="sec4" id="projects">
+    <div class="sec4-1">
+        <h1>Projects</h1>
+    </div>
+    <div class="sec4-2">
+        <div class="project-card">
+            <h2>Portfolio Website</h2>
+            <p>A personal portfolio website built with HTML, CSS, and JavaScript.</p>
+            <a href="https://github.com/" target="_blank">View Code</a>
+        </div>
+        <div class="project-card">
+            <h2>Weather App</h2>
+            <p>Weather forecast app using React and OpenWeather API.</p>
+            <a href="https://github.com/" target="_blank">View Code</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="sec5" id="contact">
+    <div class="sec5-1">
+        <h1>Contact</h1>
+    </div>
+    <div class="sec5-2">
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="formMessage"></div>
+    </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
