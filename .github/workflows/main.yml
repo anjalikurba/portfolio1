@@ -1,0 +1,21 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t anjali-portfolio .
+
+      # This is a placeholder for actual deployment steps
+      # (e.g., to Netlify, GitHub Pages, or a private VPS)
+      - name: Deployment Placeholder
+        run: echo "Ready for deployment to production server"
