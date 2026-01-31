@@ -1,16 +1,24 @@
 :root {
     --primary: #6366f1;
+    /* Indigo 500 */
     --primary-hover: #4f46e5;
-    --primary-glow: rgba(99, 102, 241, 0.5);
-    --secondary: #a855f7;
+    /* Indigo 600 */
+    --primary-glow: rgba(99, 102, 241, 0.4);
+    --secondary: #ec4899;
+    /* Pink 500 - Improved accent */
     --bg-dark: #0f172a;
+    /* Slate 900 */
     --bg-darker: #020617;
+    /* Slate 950 */
     --text-main: #f8fafc;
+    /* Slate 50 */
     --text-muted: #94a3b8;
-    --glass: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --card-bg: rgba(30, 41, 59, 0.5);
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Slate 400 */
+    --glass: rgba(30, 41, 59, 0.7);
+    /* Slightly more opaque for better readability */
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(30, 41, 59, 0.4);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -202,43 +210,51 @@ body::before {
     margin-bottom: 2rem;
 }
 
-.btns {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.btns a,
-.btns button {
+/* Button Styles */
+.btn-primary {
     padding: 0.8rem 2rem;
     border-radius: 12px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     transition: var(--transition);
-}
-
-.btns a {
     background: var(--primary);
     color: white;
     border: none;
     box-shadow: 0 10px 20px -5px var(--primary-glow);
+    display: inline-block;
 }
 
-.btns a:hover {
+.btn-primary:hover {
     background: var(--primary-hover);
     transform: translateY(-3px);
     box-shadow: 0 15px 30px -5px var(--primary-glow);
 }
 
-.btns button {
+.btn-secondary {
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
     background: transparent;
     color: var(--text-main);
     border: 1px solid var(--glass-border);
+    display: inline-block;
 }
 
-.btns button:hover {
+.btn-secondary:hover {
     background: var(--glass);
+    border-color: var(--primary);
     transform: translateY(-3px);
+}
+
+.btns {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* Ensure buttons wrap on very small screens */
 }
 
 .social {
@@ -460,6 +476,26 @@ section h1 {
     flex-grow: 1;
 }
 
+.case-study {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.case-study p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.case-study strong {
+    color: var(--secondary);
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
 .project-links {
     display: flex;
     gap: 1rem;
@@ -608,5 +644,74 @@ section h1 {
 
     .sec4-2 {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Menu Styles */
+.menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        padding: 1rem 5%;
+        background: rgba(2, 6, 23, 0.95);
+        /* More solid background on mobile */
+    }
+
+    .menu-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(2, 6, 23, 0.98);
+        padding: 2rem;
+        gap: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-bar.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .sec1-2 h1 {
+        font-size: 2.5rem;
+    }
+
+    .sec1-1 img {
+        width: 280px;
+        height: 280px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .btns {
+        justify-content: center;
     }
 }

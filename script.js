@@ -8,6 +8,35 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Mobile Menu Toggle
+const menuBtn = document.querySelector('.menu-btn');
+const menuBar = document.querySelector('.menu-bar');
+
+if (menuBtn && menuBar) {
+    menuBtn.addEventListener('click', () => {
+        menuBar.classList.toggle('active');
+        // Toggle icon between bars and times (x)
+        const icon = menuBtn.querySelector('i');
+        if (menuBar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.menu-bar a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuBar.classList.remove('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
+}
+
 // Smooth scroll for navigation links
 document.querySelectorAll('.menu-bar a').forEach(link => {
     link.addEventListener('click', function (e) {
