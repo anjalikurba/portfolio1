@@ -245,6 +245,8 @@ body::before {
     margin-top: 2.5rem;
     display: flex;
     gap: 1.5rem;
+    position: relative;
+    z-index: 100;
 }
 
 .social a {
